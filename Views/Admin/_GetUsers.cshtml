@@ -1,0 +1,31 @@
+﻿@model IEnumerable<User>
+<caption>Пользователи</caption>
+<thead>
+    <tr>
+        <td> Id </td>
+        <td>Название </td>
+        <td>Тип </td>
+        <td>Страна </td>
+        <td>Город </td>
+        <td>Улица </td>
+        <td>Состояние</td>
+        <td>Сайт </td>
+        <td>Id Пользователя </td>
+    </tr>
+</thead>
+<tbody>
+    @foreach (Map.Models.User p in Model)
+    {
+        <tr>
+            <td>@p.Id </td>
+            <td>@p.Name </td>
+            <td>@p.CardId </td>
+            <td>@p.Email </td>
+            <td>@p.Phone </td>
+            <td>@p.Role </td>
+            <td>@p.Address </td>
+            <td><a>Удалить</a></td>
+            <td><a>Редактировать</a></td>
+        </tr>
+    }
+</tbody>

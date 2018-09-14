@@ -1,0 +1,62 @@
+﻿@model Map.Models.Place
+
+<div class ="dialog-container">
+<form asp-action="EditPlace" method="post" class="decor">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+        <h3>Редактировать</h3>
+        <div class="form-group">
+            <label asp-for="Name">Название</label>
+            <div><span asp-validation-for="Name" class="text-danger"></span></div>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Type">Тип</label>
+            <input asp-for="Type" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Country">Страна</label>
+            <input asp-for="Country" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="City">Город</label>
+            <input asp-for="City" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Street">Улица</label>
+            <input asp-for="Street" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Site">Сайт</label>
+            <input asp-for="Site" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="State">
+                Состояние (Detached, Added, Proven, Recommended)
+            </label>
+            <input asp-for="State" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PlaceId">ГуглИД </label>
+            <input asp-for="PlaceId" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Lat">Лат </label>
+            <div><span asp-validation-for="Lat" class="text-danger"></span></div>
+            <input asp-for="Lat" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Lng">Лнг</label>
+            <div><span asp-validation-for="Lng" class="text-danger"></span></div>
+            <input asp-for="Lng" class="form-control" />
+        </div>
+        <div class="text-center">
+            <input type="submit" value="Сохранить">
+            <input type="button" value="Отмена" onclick="location.href='@Url.Action("Index", "Admin")'" />
+        </div>
+    </div>
+</form>
+</div>

@@ -1,0 +1,440 @@
+﻿
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+/*Разметка*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+body {
+    font: 12px/18px Arial, sans-serif;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 1000px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+#map {
+    height: 100%;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    height: 75px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align:center;
+
+}
+.header-title-conteiner {
+    width: 100%;
+    text-align: center;
+}
+.header-title {
+width:100%;
+margin:auto;
+}
+.menu {
+margin-right:5px;
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+    padding: 0 0 100px;
+}
+
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    margin: -100px auto 0;
+    min-width: 1000px;
+    height: 100px;
+    position: relative;
+}
+
+/*Меню*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+    list-style: none;
+    margin: 50px 0 5px;
+    padding: 5px 0 15px;
+    text-align: center;
+    background: white;
+}
+
+    .menu-main li {
+        display: inline-block;
+    }
+
+        .menu-main li:after {
+            content: "|";
+            color: #606060;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .menu-main li:last-child:after {
+            content: none;
+        }
+
+    .menu-main a {
+        text-decoration: none;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        letter-spacing: 2px;
+        position: relative;
+        padding-bottom: 20px;
+        margin: 0 34px 0 30px;
+        font-size: 17px;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: color .2s;
+    }
+
+        .menu-main a, .menu-main a:visited {
+            color: #9d999d;
+        }
+
+            .menu-main a.current, .menu-main a:hover {
+                color: #feb386;
+            }
+
+            .menu-main a:before,
+            .menu-main a:after {
+                content: "";
+                position: absolute;
+                height: 4px;
+                top: auto;
+                right: 50%;
+                bottom: -5px;
+                left: 50%;
+                background: #feb386;
+                transition: .8s;
+            }
+
+            .menu-main a:hover:before, .menu-main .current:before {
+                left: 0;
+            }
+
+            .menu-main a:hover:after, .menu-main .current:after {
+                right: 0;
+            }
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+
+        .menu-main li {
+            display: block;
+        }
+
+            .menu-main li:after {
+                content: none;
+            }
+
+        .menu-main a {
+            padding: 25px 0 20px;
+            margin: 0 30px;
+        }
+}
+
+
+/*Таблица*/
+.table_price {
+    margin: auto;
+    border-collapse: collapse;
+    border-left: 3px solid #F79361;
+    border-right: 3px solid #F79361;
+    border-bottom: 3px solid #F79361;
+    font-family: "Lucida Grande", sans-serif;
+}
+
+    .table_price caption {
+        background: #F79361;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+        color: white;
+        font-family: "Roboto Slab",serif;
+        font-style: normal;
+        font-size: 26px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .table_price td, .table_price th {
+        padding: 10px;
+    }
+
+    .table_price th {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .table_price tr:nth-child(2n) {
+        background: #E5E5E5;
+    }
+
+    .table_price td:last-of-type {
+        text-align: center;
+    }
+
+    .table_price a, .table_price button {
+        display: inline-block;
+        padding: 5px 10px;
+        background: #F79361;
+        box-shadow: 2px 2px 0 0 #a22800;
+        position: relative;
+    }
+
+        .table_price a:hover, button .table_price a:hover {
+            box-shadow: none;
+            top: 2px;
+            left: 2px;
+        }
+
+
+        /*Edit Dialog
+            __________________________________________________________*/
+.dialog-container {
+    width: 500px;
+    background: #f69a73;
+
+}
+
+.decor {
+    position: relative;
+    max-width: 400px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 30px;
+   
+   
+}
+
+.form-left-decoration,
+.form-right-decoration {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: #f69a73;
+    border-radius: 20px;
+}
+
+.form-left-decoration {
+    bottom: 60px;
+    left: -30px;
+}
+
+.form-right-decoration {
+    top: 60px;
+    right: -30px;
+}
+
+    .form-left-decoration:before,
+    .form-left-decoration:after,
+    .form-right-decoration:before,
+    .form-right-decoration:after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        border-radius: 30px;
+        background: white;
+    }
+
+.form-left-decoration:before {
+    top: -20px;
+}
+
+.form-left-decoration:after {
+    top: 20px;
+    left: 10px;
+}
+
+.form-right-decoration:before {
+    top: -20px;
+    right: 0;
+}
+
+.form-right-decoration:after {
+    top: 20px;
+    right: 10px;
+}
+
+.circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
+
+.form-inner {
+    padding: 50px;
+}
+
+    .form-inner input,
+    .form-inner textarea {
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 10px;
+        background: #E9EFF6;
+        line-height: 40px;
+        border-width: 0;
+        border-radius: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+        .form-inner input[type="submit"], .form-inner input[type="button"] {
+            margin-top: 30px;
+            background: #f69a73;
+            border-bottom: 4px solid #d87d56;
+            color: white;
+            font-size: 14px;
+        }
+
+   
+
+    .form-inner label {
+        width:300px;
+        height:45px;
+        margin-top: 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #707981;
+    }
+
+.form-inner textarea {
+    resize: none;
+}
+    
+
+    .form-inner h3 {
+        margin-top: 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: #707981;
+    }
+
+    /*Buttons on Authorized View*/
+.control {
+    font-family: arial;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 6px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #faddbc;
+    border: 1px dashed #ff7d21;
+}
+
+.control-radio .control_indicator {
+    border-radius: 50%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #f6bc81;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #ff9310;
+}
+
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #fd9410;
+}
+
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+    display: inline-block;
+}
+
+.control-radio .control_indicator:after {
+    left: 5px;
+    top: 3px;
+    height: 0px;
+    width: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.control-radio input:disabled ~ .control_indicator:after {
+    background: #7b7b7b;
+}

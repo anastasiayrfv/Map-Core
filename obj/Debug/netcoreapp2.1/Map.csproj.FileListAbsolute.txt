@@ -1,0 +1,78 @@
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.deps.json
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.runtimeconfig.json
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.runtimeconfig.dev.json
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.dll
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.pdb
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.Views.dll
+C:\Users\nastya\source\repos\Map\Map\bin\Debug\netcoreapp2.1\Map.Views.pdb
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.csprojAssemblyReference.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.csproj.CoreCompileInputs.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.RazorAssemblyInfo.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.RazorAssemblyInfo.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.AssemblyInfoInputs.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.AssemblyInfo.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.TagHelpers.input.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.TagHelpers.output.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.RazorCoreGenerate.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.RazorTargetAssemblyInfo.cache
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.RazorTargetAssemblyInfo.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.Views.pdb
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.dll
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.pdb
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Map.csproj.CopyComplete
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_GetAdminPanel.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_GetPlaces.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_GetUsers.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Map.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Map.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_EditPlace.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserAnonymous.g.cshtml.cs
+C:\Users\nastya\source\repos\Map\Map\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserAuthorized.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.deps.json
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.runtimeconfig.json
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.runtimeconfig.dev.json
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.dll
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.pdb
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.Views.dll
+C:\Users\nastya\source\repos\Map - копия\Map\bin\Debug\netcoreapp2.1\Map.Views.pdb
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.csprojAssemblyReference.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.csproj.CoreCompileInputs.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.RazorAssemblyInfo.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.RazorAssemblyInfo.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.AssemblyInfoInputs.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.AssemblyInfo.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.TagHelpers.input.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.TagHelpers.output.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.RazorCoreGenerate.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Map.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_EditPlace.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_GetAdminPanel.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_GetPlaces.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Admin\_GetUsers.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserAnonymous.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserAuthorized.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Map.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.RazorTargetAssemblyInfo.cache
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.RazorTargetAssemblyInfo.cs
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.Views.pdb
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.dll
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.pdb
+C:\Users\nastya\source\repos\Map - копия\Map\obj\Debug\netcoreapp2.1\Map.csproj.CopyComplete

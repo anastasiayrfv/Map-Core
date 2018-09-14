@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Place>
+
+<table class="table_price">
+    <caption>Места</caption>
+    <thead>
+        <tr>
+            <td> Id </td>
+            <td>Название </td>
+            <td>Тип </td>
+            <td>Страна </td>
+            <td>Город </td>
+            <td>Улица </td>
+            <td>Состояние</td>
+            <td>Сайт </td>
+            <td>Id Пользователя </td>
+        </tr>
+    </thead>
+    @foreach (Place p in Model)
+    {
+    <tr>
+        <td>@p.Id </td>
+        <td>@p.Name </td>
+        <td>@p.Type </td>
+        <td>@p.Country </td>
+        <td>@p.City </td>
+        <td>@p.Street </td>
+        <td>@p.State </td>
+        <td>@p.Site </td>
+        <td>@p.UserId </td>
+        <td>
+            @Html.ActionLink("Редактировать", "EditPlace", "Admin", new { Id = p.Id },
+                new { @class = "viewDialog", data_dialog_title = "Редактирование модели"  })
+        </td>
+        <td>
+            <form asp-action="DeletePlace" method="post">
+                <input type="hidden" name="Id" value="@p.Id" />
+                <button type="submit" class="btn btn-danger btn-sm">
+                    Удалить
+                </button>
+            </form>
+        </td>
+    </tr>
+    }
+</table>
+<div class="text-center">
+    <a asp-action="Create" class="btn btn-primary">Добавить</a>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajaxSetup({ cache: false });
+        $(".viewDialog").on("click", function (e) {
+            e.preventDefault();
+
+            $("<div></div>")
+                .addClass("dialog")
+                .appendTo("body")
+                .dialog({
+                    modal: true
+                })
+                .load(this.href);
+        });
+
+    });
+</script>
+

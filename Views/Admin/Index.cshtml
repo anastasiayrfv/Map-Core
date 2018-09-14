@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Map.Models.Place>
+@{
+    Layout= "_AdminLayout";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminView</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu-main">
+            <li><a href="" class="current">Места</a></li>
+            <li><a href="">Пользователи</a></li>
+            <li><a href="">Статистика</a></li>
+            <li><a href="">Панель администратора</a></li>
+        </ul>
+    </nav><!-- .nav-->
+
+    @Html.Partial("_GetPlaces");
+
+</body>
+</html>

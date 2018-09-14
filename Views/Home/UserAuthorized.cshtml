@@ -1,0 +1,339 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYDJvBdTt6k49Fdsl2YXrP5QDcbyl9NRM&libraries=places,visualization" defer></script>
+<script src="~/js/infobubble.js" defer></script>
+<script src="~/js/infobubble-compiled.js" defer></script>
+<script src="~/js/markerclusterer.js" defer></script>
+
+@*<form asp-action="Search" method="post" >
+        <div id="chunky-buttons">
+            <div class="chunky">
+                <input class="chunky25"  type="submit" value="Search">
+            </div>
+        </div>
+
+    </form>*@
+
+<div class="control-group">
+    <label class="control control-radio">
+        Все
+        <input type="radio" name="type" checked="checked" value="Все" />
+        <div class="control_indicator"></div>
+    </label>
+
+    <label class="control control-radio">
+        Тип ex
+        <input type="radio" name="type" value="ex" />
+        <div class="control_indicator"></div>
+    </label>
+
+    <label class="control control-radio">
+        Тип exs
+        <input type="radio" name="type" value="exs" />
+        <div class="control_indicator"></div>
+    </label>
+
+    <label class="control control-radio">
+        Тип
+        <input type="radio" name="type" value=" " />
+        <div class="control_indicator"></div>
+    </label>
+
+    <label class="control control-radio">
+        Тип
+        <input type="radio" name="type" value=" " />
+        <div class="control_indicator"></div>
+    </label>
+
+</div>
+
+<input type="search"  id="search" name="search"/>
+
+<input type="button" value="Search" onclick=GetMarkers()>
+<div id="map" style="height: 600px; width:100%;"></div>
+
+
+@section scripts {
+    <script type="text/javascript">
+        var markers = new Array(5);
+        var infowindow;
+        var map;
+        var infoWindow;
+        var service;
+        var pos;
+
+        function GetMarkers()
+        {
+            let _type = document.querySelector('input[name="type"]:checked').value;
+            let _searchQuery = document.querySelector('input[name="search"]').value;
+
+            fetch('@Url.Action("GetData2", "Home")', {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: 'post',
+                body: JSON.stringify({ type: _type, searchQuery: _searchQuery })
+            })
+            .then(function (response)
+            {
+                if (response.status !== 200)
+                {
+                    console.log(
+                        'Looks like there was a problem. Status Code: ' + response.status
+                    );
+                    return;
+                }
+                response.json().then(function (data)
+                {
+                    markers = data;
+                    console.log(data);
+                    initMap();
+
+                });
+            })
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
+        }
+
+        fetch('@Url.Action("GetData", "Home")')
+            .then(function (response)
+            {
+                if (response.status !== 200)
+                {
+                    console.log(
+                        'Looks like there was a problem. Status Code: ' + response.status
+                    );
+                    return;
+                }
+                response.json().then(function (data)
+                {
+                    markers = data;
+                    console.log("In First");
+                    initMap();
+
+                });
+            })
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
+
+        function initMap()
+        {
+
+          var pyrmont = { lat: 50.45136068, lng: 30.48783713 };
+
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: pyrmont,
+            zoom: 4,
+            mapTypeId: 'roadmap',
+            styles: [
+            {
+                "featureType": "all",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "hue": "#008eff"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": "0"
+                    },
+                    {
+                        "lightness": "0"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "saturation": "-60"
+                    },
+                    {
+                        "lightness": "-20"
+                    }
+                ]
+            }
+        ]
+          });
+
+
+          var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
+            var icons =
+            {
+                1:
+                {
+                    icon: 'https://goodzone.international/map/mmm2.png', //orange
+                },
+
+                2:
+                {
+                    icon: 'https://goodzone.international/map/mmm3.png', //red
+                },
+
+                3:
+                {
+                    icon: 'https://goodzone.international/images/m1.png', //pink
+                },
+
+                0:
+                {
+                    icon: 'https://goodzone.international/map/mmm1.png', // white
+                },
+            };
+
+
+            infowindow = new google.maps.InfoWindow();
+          service = new google.maps.places.PlacesService(map);
+
+            for (let i = 0; i < markers.length; i++)
+                markers[i].position = new google.maps.LatLng(markers[i].lat, markers[i].lng);
+
+          let arr = new Array(5);
+          let i = 0;
+
+          // Create markers.
+          markers.forEach(function(mark) {
+             var marker = new google.maps.Marker({
+                  position: mark.position,
+                  icon: icons[3].icon,
+                  map: map,
+                  name:mark.name,
+                  place_id: mark.place_id,
+                  address: mark.address,
+                  rating: mark.rating,
+                  site: mark.site,
+                  state: mark.state,
+                  type: mark.type,
+                  city: mark.city,
+                  street: mark.street
+            });
+            arr[i++] = marker;
+
+              marker.addListener('click', function ()
+              {
+                 marker.setIcon(icons[mark.state].icon);
+
+                 if (marker.state != 2 || marker.site == "")
+                     var site = "";
+                 else
+                     var site = '<br>Site:  <a href="' + marker.site + '" > ' + marker.site + '  </a>';
+
+                 if (marker.state == 0)
+                 {
+                     var s = "НОВОЕ МЕСТО"
+                     var inf0 = new InfoBubble(
+                         {
+                             maxWidth: 300,
+                             content: '<div class="c0"> <a href=' + marker.site + ' target="_blank"> <div class="cont_1">' + marker.type.toUpperCase() + " -- " + marker.name.toUpperCase() + ' <br><strong> ' + marker.street + "  " + marker.city + '</strong> <br><strong> ' + s + '</strong></div></a></div> ',
+                             backgroundColor: 'rgb(250, 250, 250)',
+                         });
+
+                     inf0.close();
+     	             inf0.open(map, marker);
+                 }
+                 else if (marker.state==1 )
+                 {
+                    var s ="ПРОВЕРЕНО "
+                    var inf1 = new InfoBubble(
+                        {
+                          maxWidth: 300,
+                          content: '<div class="c1"> <a href='+marker.site +' target="_blank"> <div class="cont_1">'+marker.type.toUpperCase()+" -- "+ marker.name.toUpperCase()  +' <br><strong> '+marker.street+"  " + marker.city+'</strong> <br><strong> '+s+'</strong></div></a></div> ' ,
+                          backgroundColor: 'rgb(249, 117, 0)'
+                         });
+
+        		    inf1.open(map, marker);
+                 }
+                 else if (marker.state==2)
+                 {
+                    var s="КЛЕВОЕ МЕСТО "
+                    var inf2 = new InfoBubble(
+                        {
+                          maxWidth: 300,
+                          content: '<div class="c2"> <a href='+marker.site +' target="_blank"> <div class="cont_1">'+marker.type.toUpperCase()+" -- "+ marker.name.toUpperCase()  +' <br><strong> '+marker.street+"  " + marker.city+'</strong> <br><strong> '+s+'</strong></div></a></div> ' ,
+                          backgroundColor: 'rgb(141,0, 0)'
+                         });
+
+        		    inf2.open(map, marker);
+                  }
+              });
+          });
+
+          // Add a marker clusterer.
+            var markerCluster = new MarkerClusterer(map, arr, { imagePath: 'https://goodzone.international/images/m' });
+
+            // Geolocation.
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+
+                        var myMarker = new google.maps.Marker({
+                            position: pos,
+                            map: map,
+                            draggable: true,
+                            animation: google.maps.Animation.BOUNCE,
+                        });
+
+
+                        map.setCenter(pos);
+                    },
+                    function () {
+                        handleLocationError(true, infowindow, map.getCenter());
+                    });
+            }
+            else  // Browser doesn't support Geolocation
+            {
+                handleLocationError(false, infowindow, map.getCenter());
+            }
+
+        } //initMap end
+
+        function handleLocationError(browserHasGeolocation, infowindow, pos)
+        {
+            infowindow.setPosition(pos);
+            infowindow.setContent(
+                browserHasGeolocation
+                    ? 'Error: The Geolocation service failed.'
+                    : "Error: Your browser doesn't support geolocation."
+            );
+        }
+
+    </script>
+}

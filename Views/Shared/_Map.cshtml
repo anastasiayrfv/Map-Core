@@ -1,0 +1,30 @@
+﻿<script>
+      var script = '<script src="infobubble';
+      if (document.location.search.indexOf('compiled') !== -1) {
+        script += '-compiled';
+      }
+      script += '.js"><' + '/script>';
+      document.write(script);
+    </script>  
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYDJvBdTt6k49Fdsl2YXrP5QDcbyl9NRM&libraries=places,visualization"  defer></script>
+ <script src="markerclusterer.js"defer >
+    </script> 
+  <script
+   src= "javascript.js"defer >
+  </script>
+
+
+
+@*<script>
+          var script = '<script src="~/js/infobubble';
+          if (document.location.search.indexOf('compiled') !== -1) {
+            script += '-compiled';
+          }
+          script += '.js"><' + '/script>';
+          document.write(script);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYDJvBdTt6k49Fdsl2YXrP5QDcbyl9NRM&libraries=places,visualization" defer></script>
+    <script src="~/js/markerclusterer.js" defer>
+    </script>
+    <script src="~/js/javascript.js" defer>
+    </script>*@

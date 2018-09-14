@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+        <br/>
+            <div id="header-title-conteiner">
+                <div id="header-title">
+                    <a href="https://goodzone.international" title="абонемент полцены"><img src="https://goodzone.international/wp-content/uploads/2018/03/logo_1_1-e1522702757625.png" alt="абонемент полцены"></a>
+                </div>
+                </div>
+                    @*<ul  class="menu">
+                        <li class=""><a title="Русский" href="#">Язык:&nbsp;<img src="https://goodzone.international/wp-content/plugins/qtranslate-x/flags/ru.png" alt="Русский"></a></li>
+                    </ul>*@
+
+</header><!-- .header-->
+
+        <main class="content">
+
+            @RenderSection("scripts")
+            @RenderBody()
+
+        </main><!-- .content -->
+
+    </div><!-- .wrapper -->
+
+    <footer class="footer">
+
+    </footer><!-- .footer -->
+   
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@{ 
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+         /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+         #map {
+             height: 100%;
+         }
+         /* Optional: Makes the sample page fill the window. */
+         html, body {
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+    </style>
+</head>
+<body>
+    @*<script>
+        var script = '<script src="infobubble';
+        if (document.location.search.indexOf('compiled') !== -1) {
+            script += '-compiled';
+        }
+        script += '.js"><' + '/script>';
+        document.write(script);
+    </script>*@
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYDJvBdTt6k49Fdsl2YXrP5QDcbyl9NRM&libraries=places,visualization" defer></script>
+    <script src="markerclusterer.js" defer>
+    </script>
+    <script src="javascript.js" defer>
+    </script>
+</body>
+</html>
+
